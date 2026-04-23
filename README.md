@@ -26,10 +26,10 @@ Run `npm run test` to see the tool in action using the `test.json` fixture:
 ┌─────────┬─────────────────────────────────────────────────┬───────────────┬──────┬────────────────────────┐
 │ (index) │ host                                            │ statusCode    │ ms   │ alert                  │
 ├─────────┼─────────────────────────────────────────────────┼───────────────┼──────┼────────────────────────┤
-│ 0       │ '[https://jsonplaceholder.typicode.com/posts/1](https://jsonplaceholder.typicode.com/posts/1)'  │ 200           │ 123  │                        │
-│ 1       │ '[https://httpstat.us/404](https://httpstat.us/404)'                       │ 'DOWN'        │ 1100 │ 'Down 3 runs in a row' │
-│ 2       │ '[https://httpstat.us/500](https://httpstat.us/500)'                       │ 'DOWN'        │ 2176 │ 'Down 3 runs in a row' │
-│ 3       │ '[https://this-is-a-fake-domain-for-testing.com](https://this-is-a-fake-domain-for-testing.com)' │ 'DOWN'        │ 87   │ 'Down 3 runs in a row' │
-│ 4       │ 'not-a-real-url-format'                         │ 'INVALID_URL' │ 0    │                        │
+│ 0       │ https://jsonplaceholder.typicode.com/posts/1    │ 200           │ 123  │                        │
+│ 1       │ https://httpstat.us/404                         │ 'DOWN'        │ 1100 │ 'Down 3 runs in a row' │
+│ 2       │ https://httpstat.us/500                         │ 'DOWN'        │ 2176 │ 'Down 3 runs in a row' │
+│ 3       │ https://this-is-a-fake-domain-for-testing.com   │ 'DOWN'        │ 87   │ 'Down 3 runs in a row' │
+│ 4       │ not-a-real-url-format                           │ 'INVALID_URL' │ 0    │                        │
 └─────────┴─────────────────────────────────────────────────┴───────────────┴──────┴────────────────────────┘
 ```
