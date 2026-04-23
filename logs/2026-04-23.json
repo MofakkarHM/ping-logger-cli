@@ -1,0 +1,27 @@
+[
+  {
+    "host": "https://jsonplaceholder.typicode.com/posts/1",
+    "statusCode": 200,
+    "ms": 119
+  },
+  {
+    "host": "https://httpstat.us/404",
+    "statusCode": "TIMEOUT",
+    "ms": 5014
+  },
+  {
+    "host": "https://httpstat.us/500",
+    "statusCode": "TIMEOUT",
+    "ms": 5012
+  },
+  {
+    "host": "https://this-is-a-fake-domain-for-testing.com",
+    "statusCode": "DOWN",
+    "ms": 186
+  },
+  {
+    "host": "not-a-real-url-format",
+    "statusCode": "INVALID_URL",
+    "ms": 0
+  }
+]
