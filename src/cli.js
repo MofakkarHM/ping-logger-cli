@@ -1,20 +1,37 @@
 import fs from "fs/promises";
 import { pingDevice } from "./fetcher.js";
-import { writeLog } from "./writer.js";
+import { writeLog, flagConsecutiveFailure } from "./writer.js";
 
 async function main() {
   try {
-    const fileContent = await fs.readFile("devices.json", "utf-8");
+    const args = process.argv.slice(2);
+    let inputFile = "devices.json";
+    let outDir = "logs";
+
+    for (let i = 0; i < args.length; i++) {
+      if (args[i] === "--input" && args[i + 1]) {
+        inputFile = args[i + 1];
+      }
+      if (args[i] === "--out" && args[i + 1]) {
+        outDir = args[i + 1];
+      }
+    }
+
+    const fileContent = await fs.readFile(inputFile, "utf-8");
     const urls = JSON.parse(fileContent);
 
-    console.log(`Starting Ping Logger for ${urls.length} devices `);
+    console.log(
+      `Starting Ping Logger... (Input: ${inputFile} | out: ${outDir})\n`,
+    );
 
-    const res = await Promise.all(urls.map((url) => pingDevice(url)));
+    const rawResult = await Promise.all(urls.map((url) => pingDevice(url)));
 
-    const logPath = await writeLog(res);
+    const finalResult = await flagConsecutiveFailure(rawResult, outDir);
 
-    console.log(`Wrote ${res.length} records to ${logPath}`);
-    console.table(res);
+    const logPath = await writeLog(finalResult, outDir);
+
+    console.log(`Wrote ${finalResult.length} records to ${logPath}`);
+    console.table(finalResult);
   } catch (err) {
     console.log("CLI ERROR: ", err.message);
     process.exit(1);
