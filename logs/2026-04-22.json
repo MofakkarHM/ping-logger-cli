@@ -2,25 +2,22 @@
   {
     "host": "https://jsonplaceholder.typicode.com/posts/1",
     "statusCode": 200,
-    "ms": 123
+    "ms": 171
   },
   {
     "host": "https://httpstat.us/404",
     "statusCode": "DOWN",
-    "ms": 1100,
-    "alert": "Down 3 runs in a row"
+    "ms": 1177
   },
   {
     "host": "https://httpstat.us/500",
-    "statusCode": "DOWN",
-    "ms": 2176,
-    "alert": "Down 3 runs in a row"
+    "statusCode": "TIMEOUT",
+    "ms": 5002
   },
   {
     "host": "https://this-is-a-fake-domain-for-testing.com",
     "statusCode": "DOWN",
-    "ms": 87,
-    "alert": "Down 3 runs in a row"
+    "ms": 127
   },
   {
     "host": "not-a-real-url-format",

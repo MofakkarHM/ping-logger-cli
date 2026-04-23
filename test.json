@@ -1,0 +1,7 @@
+[
+  "https://jsonplaceholder.typicode.com/posts/1",
+  "https://httpstat.us/404",
+  "https://httpstat.us/500",
+  "https://this-is-a-fake-domain-for-testing.com",
+  "not-a-real-url-format"
+]
