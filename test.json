@@ -3,5 +3,6 @@
   "https://httpstat.us/404",
   "https://httpstat.us/500",
   "https://this-is-a-fake-domain-for-testing.com",
-  "not-a-real-url-format"
+  "not-a-real-url-format",
+  "https://jsonplaceholder.typicode.com/posts/1/comments"
 ]

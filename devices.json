@@ -1,1 +1,6 @@
-["https://google.com"]
+[
+  "https://google.com",
+  "https://jsonplaceholder.typicode.com/posts/1/comments",
+  "https://httpstat.us/500",
+  "https://this-is-a-fake-domain-for-testing.com"
+]
