@@ -1,12 +1,28 @@
 # Ping Logger CLI
 
-A Node.js CLI tool that pings a list of URLs and logs their latency and status to a daily JSON file.
+A Node.js CLI tool that pings a list of URLs and logs their latency and status to a daily JSON file. **Stretch goal:** Automatically flags hosts down for 3+ consecutive runs.
 
 ## How to Run
 
-1. Ensure you are running Node 18+ (see `.nvmrc`).
-2. Run `npm install` (if dependencies are added later).
-3. Run `npm start`.
+1. Ensure you are running Node 18+ (see `.nvmrc`). You can use `nvm use` to auto-switch.
+2. Run `npm start` to ping devices from `devices.json`.
+3. Run `npm run test` to test with the `test.json` fixture.
+
+## Usage
+
+```bash
+# Default: reads devices.json, writes to logs/
+npm start
+
+# Custom input file
+npm start -- --input custom-devices.json
+
+# Custom output directory
+npm start -- --out ./my-logs
+
+# Combine flags
+npm start -- --input hosts.json --out ./results
+```
 
 ## Self-Evaluation Scorecard
 
