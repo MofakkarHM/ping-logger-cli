@@ -7,11 +7,17 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "start": "node src/cli.js",
-    "test": "node src/cli.js --input test.json"
+    "start": "tsx src/cli.ts",
+    "build": "tsc",
+    "test": "tsx src/cli.ts --input test.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
 }

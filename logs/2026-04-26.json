@@ -1,0 +1,35 @@
+[
+  {
+    "host": "https://jsonplaceholder.typicode.com/posts/1",
+    "statusCode": 200,
+    "ms": 852
+  },
+  {
+    "host": "https://httpstat.us/404",
+    "statusCode": "DOWN",
+    "ms": 1302,
+    "alert": "Down 3 runs in a row"
+  },
+  {
+    "host": "https://httpstat.us/500",
+    "statusCode": "DOWN",
+    "ms": 1393,
+    "alert": "Down 3 runs in a row"
+  },
+  {
+    "host": "https://this-is-a-fake-domain-for-testing.com",
+    "statusCode": "DOWN",
+    "ms": 263,
+    "alert": "Down 3 runs in a row"
+  },
+  {
+    "host": "not-a-real-url-format",
+    "statusCode": "INVALID_URL",
+    "ms": 0
+  },
+  {
+    "host": "https://jsonplaceholder.typicode.com/posts/1/comments",
+    "statusCode": 200,
+    "ms": 1194
+  }
+]
